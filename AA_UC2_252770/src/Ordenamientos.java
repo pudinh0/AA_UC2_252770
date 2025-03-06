@@ -21,10 +21,9 @@ public class Ordenamientos {
 
             //bucle interno que se encarga de comparar los elementos
             for (int j = 0; j < arr.length - 1 - i; j++) { //1 + n-1 - n + n
-
+               
                 //Comparacion del elemento actual si es mayor al siguiente, intercambio de posiciones de elementos
                 if (arr[j] > arr[j + 1]) { //n
-
                     // asignacion del elementos actual a una varible temporal o auxiliar
                     int temp = arr[j]; //n
 
@@ -33,6 +32,8 @@ public class Ordenamientos {
 
                     //asignacion del elemento guardado en la variable temporal al siguiente indice
                     arr[j + 1] = temp; //n
+
+                    System.out.println("iteracion:"+j+"elemento:"+arr[j]);
                 }
 
             }
