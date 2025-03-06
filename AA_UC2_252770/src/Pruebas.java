@@ -14,6 +14,20 @@ public class Pruebas {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        Ordenamientos prueba = new Ordenamientos();
+        int [] arr= {1,5,6,4,7};
+        
+        
+        System.out.println("Arreglo antes de ordenar:");
+        for (int i = 0; i < arr.length-1; i++) {
+            System.out.println(arr[i]);
+        }
+        prueba.bubbleSort(arr);
+        System.out.println("Arreglo despues de ordenar:");
+        for (int i = 0; i < arr.length-1; i++) {
+            System.out.println(arr[i]);
+        }
     }
     
 }
