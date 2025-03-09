@@ -14,26 +14,27 @@ public class Pruebas {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
+
         //se crea una instancia para probar el metodo bublesort y un arreglo desordenado de tamaño 5
         Ordenamientos prueba = new Ordenamientos();
-        int [] arr= {1,5,6,4,7};
-        
-        System.out.println("Se utiliza un arreglo de tipo entero de 5 espacios para las pruebas donde arr = {1,5,6,4,7} ");
-        
+        int[] arr = {1, 5, 6, 4, 7};
+
+        //System.out.println("Se utiliza un arreglo de tipo entero de 5 espacios para las pruebas donde arr = {1,5,6,4,7} ");
         //Impresion del arreglo antes de utilizar el metodo bublesort para demostrar que no esta ordenado
-        System.out.println("Arreglo antes de ordenar:");
-        for (int i = 0; i < arr.length; i++) {
-            System.out.println(arr[i]);
-        }
-        
-        System.out.println("movimientos de indices del metodo bubblesort");
+        //System.out.println("Arreglo antes de ordenar:");
+        //for (int i = 0; i < arr.length; i++) {
+        //    System.out.println(arr[i]);
+        //}
+        //System.out.println("movimientos de indices del metodo bubblesort");
         // utilizaciion del metodo bublesort e impresion del arreglo para demostrar el nuevo orden del arreglo
-        prueba.bubbleSort(arr);
-        System.out.println("Arreglo despues de ordenar:");
+        //prueba.bubbleSort(arr);
+        
+        prueba.electionSort(arr);
+        //System.out.println("Arreglo despues de ordenar:");
         for (int i = 0; i < arr.length; i++) {
             System.out.println(arr[i]);
         }
+
     }
-    
+
 }
