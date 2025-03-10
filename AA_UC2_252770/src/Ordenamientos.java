@@ -41,23 +41,28 @@ public class Ordenamientos {
     }
     
     /**
-     * Metodo que simula el acomodo por eleccion
+     * Metodo que simula el acomodo por seleccion
      * @param arr arreglo de enteros
      */
-    public void electionSort(int[] arr) { // o(n^2)
+    public void selectionSort(int[] arr) { // o(n^2)
         // se asigna  una variable temporal el valor del largo del arreglo
         int n = arr.length; //n
 
         for (int i = 0; i < n - 1; i++) { //1 n+1-1 n
+            //se asigna el valor de una variable temporal para guardar el indice de iteracion o comparacion
             int minimo = i; //n
-
+            
+            // comparacion continua de los elementos
             for (int j = i + 1; j < n; j++) { // n +1  n n
-               
+               //hace una comparacion del numero en la posicion j al minimo, donde el minimo siempre sera una posicion menor a j al principio
+               //y j crecera hasta llegar al ultimo elemento a comparar 
                 if (arr[j] < arr[minimo]) { //n
+                    //se asigna el indice del numero menor
                     minimo = j; //n
                 }
             }
-
+            
+            //parte del codigo que hace el intercambio de los elementos que contienen los indices
             int temp = arr[minimo]; //n
             arr[minimo] = arr[i]; //n 
             arr[i] = temp; // n
