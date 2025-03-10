@@ -39,22 +39,28 @@ public class Ordenamientos {
             }
         }
     }
+    
+    /**
+     * Metodo que simula el acomodo por eleccion
+     * @param arr arreglo de enteros
+     */
+    public void electionSort(int[] arr) { // o(n^2)
+        // se asigna  una variable temporal el valor del largo del arreglo
+        int n = arr.length; //n
 
-    public void electionSort(int[] arr) {
-        int n = arr.length;
+        for (int i = 0; i < n - 1; i++) { //1 n+1-1 n
+            int minimo = i; //n
 
-        for (int i = 0; i < n - 1; i++) {
-            int minimo = i;
-
-            for (int j = i + 1; j < n; j++) {
-                if (arr[j] < arr[minimo]) {
-                    minimo = j;
+            for (int j = i + 1; j < n; j++) { // n +1  n n
+               
+                if (arr[j] < arr[minimo]) { //n
+                    minimo = j; //n
                 }
             }
 
-            int temp = arr[minimo];
-            arr[minimo] = arr[i];
-            arr[i] = temp;
+            int temp = arr[minimo]; //n
+            arr[minimo] = arr[i]; //n 
+            arr[i] = temp; // n
         }
     }
 }
